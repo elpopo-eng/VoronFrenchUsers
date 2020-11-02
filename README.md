@@ -1,2 +1,2 @@
 # FrenchVoronUsers
-Voron - Le git français
+Le git français pour nos dames Voron
