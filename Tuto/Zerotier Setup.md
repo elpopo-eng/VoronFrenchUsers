@@ -21,10 +21,10 @@ https://www.stratospherix.com/img/guides/vpn/vpnsetup_04.jpg
 Done
 
 3 install on the pi:
-curl -s https://install.zerotier.com | sudo bash
+*curl -s https://install.zerotier.com | sudo bash*
 
 4: Join the previous network from the pi:
-From the command line simply type zerotier-cli join ################ with ############### being the 16-digit network ID of the network you wish to join.
+From the command line simply type *sudo zerotier-cli join* ################ with ############### being the 16-digit network ID of the network you wish to join.
 
 5: install on pc mac, linux or iphone to access remotely the printer. then join the same network as above to have your phone and voron in the same network
 
