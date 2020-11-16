@@ -26,7 +26,7 @@ printer_active_low: False
 
 maintenant ce bouton apparait
 
-![power off switch](https://github.com/elpopo-eng/VoronFrenchUsers/tree/main/Tuto/tasmota/psu24v.png)
+![power_off_switch](https://github.com/elpopo-eng/VoronFrenchUsers/blob/main/Tuto/tasmota/psu24v.png)
 
 il faut installer powermanager
 ```
