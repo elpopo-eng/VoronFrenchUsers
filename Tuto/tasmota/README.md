@@ -1,11 +1,16 @@
 Pour pouvoir allumer et eteindre le PSU 24v donc les deux MCU de la Voron depuis Mainseal avec un device tasmota (Sonoff Basic R2 chez moi)
 
-pour faire apparaitre le bouton dans mainseal :
+Installer git sur le Pi
+```
+sudo apt-get install git -y
+```
+
+Pour faire apparaitre le bouton dans mainseal :
 ```
 cd
 sudo nano /home/pi/moonraker.conf
 ```
-et ajouter dans le fichier :
+Et ajouter dans le fichier :
 ```
 [power]
 devices: printer
@@ -24,11 +29,11 @@ printer_active_low: False
 #   When set to true the pin signal is inverted.  Default is False.
 ```
 
-maintenant ce bouton apparait
+Maintenant ce bouton apparait
 
 ![power_off_switch](https://github.com/elpopo-eng/VoronFrenchUsers/blob/main/Tuto/tasmota/psu24v.png)
 
-il faut installer powermanager
+Il faut installer powermanager
 ```
 cd
 git clone https://github.com/Raabi91/powermanager
@@ -44,7 +49,7 @@ wget https://project-downloads.drogon.net/wiringpi-latest.deb
 sudo dpkg -i wiringpi-latest.deb
 ```
 
-dans les fichier de configuration de mainseal on a "powermanager_config.sh"
+Dans les fichier de configuration de mainseal on a "powermanager_config.sh"
 
 ```
 #!/bin/sh
@@ -63,9 +68,9 @@ time="300"
 # Port from moonraker
 port="7125"
 ```
-faut mettre l'ip de votre device tasmota
+Faut mettre l'ip de votre device tasmota
 
-on fini avec un reboot du pi et c'est bon !
+On fini avec un reboot du pi et c'est bon le switch fonctionne !
 ```
 sudo reboot
 ````
