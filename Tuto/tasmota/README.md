@@ -41,7 +41,7 @@ cd powermanager
 sh ./scripts/install.sh
 ```
 
-Si tu as un Raspberry Pi 4 comme moi
+Si tu as un Raspberry Pi 4 comme moi il faut faure une mise a jour manuelle de wiringpi 2.52
 
 ```
 cd /tmp
