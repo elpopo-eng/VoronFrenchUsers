@@ -1,4 +1,4 @@
-Made by iBlitz !
+Made by iBltz !
 
 Pour mettre une thermistance dans la chambre.
 
