@@ -1,0 +1,6 @@
+bon pour Mac et le partage des settings sur plusieurs PC ya une solution si simple : symlink vers documents et synchro icloud : 
+1 :copier /Users/username/Library/Application\ Support/SuperSlicer-alpha vers Documents  
+2: activer synchro icloud documents (sinon dans onedrive ca marche aussi ou google drive etc). 
+3: supprimer /Users/admin/Library/Application\ Support/SuperSlicer-alpha 
+4: ln -s /Users/username/Documents/SuperSlicer-alpha /Users/username/Library/Application\ Support/SuperSlicer-alpha
+ enjoy
