@@ -1,3 +1,6 @@
+Supporté directement par Moonraker : https://github.com/Arksine/moonraker/blob/master/docs/configuration.md#power
+
+
 Pour pouvoir allumer et eteindre le PSU 24v donc les deux MCU de la Voron depuis Mainseal avec un device tasmota (Sonoff Basic R2 chez moi)
 
 Installer git sur le Pi
