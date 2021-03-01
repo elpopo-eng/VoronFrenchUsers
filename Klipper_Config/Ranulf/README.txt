@@ -1,2 +1,0 @@
-WIP !!!
-Pour information uniquement :)
