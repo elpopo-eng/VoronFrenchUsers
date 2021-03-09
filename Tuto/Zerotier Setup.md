@@ -28,7 +28,7 @@ From the command line simply type **sudo zerotier-cli join** ################ wi
 
 **5: install**
 https://www.zerotier.com/download/
-on pc mac, linux or iphone to access remotely the printer. then join the same network as above to have your phone and voron in the same network
+on pc mac, linux or iphone to access remotely the printer. then join the same network as above to have your phone and voron in the same network, each client need to be allowed in the zerotier console by ticking the check box alongside his name, all needs to be allowed (aka printers and device that you want to access printer from) 
 
 **6: how to access :**
 From the client (here a mobile phone) type in the URL adress bar the ip of your zerotier voron that you can see in your zerotier management console, **if it does not work edit moonraker.conf to allow the zerotier iprange (192.168.193.0/24 in our example)**
