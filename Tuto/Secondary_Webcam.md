@@ -9,7 +9,7 @@ http://192.168.1.xxx:8081/?action=stream
 then create : 
 sudo nano /etc/init.d/raspi-stream.sh
 add this into :
-<code>
+```bash
 #!/bin/sh
 # /etc/init.d/mainsail-stream.sh
 ### BEGIN INIT INFO
@@ -62,7 +62,7 @@ case "$1" in
                 ;;
 esac
 exit 0
-</code>
+ ```
 sudo chmod 755 /etc/init.d/raspi-stream.sh
 sudo sudo update-rc.d raspi-stream.sh
 
