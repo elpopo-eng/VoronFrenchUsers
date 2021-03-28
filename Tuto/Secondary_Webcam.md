@@ -1,13 +1,18 @@
 In order to use a second webcam in fluidd :
 1: Setup the second webcam and ensure it works with mjpg streamer
 2: start mjpg streamer on another port with the second webcam (here a picam on port 8081:
+
+```bash
 /usr/local/bin/mjpg_streamer -i "input_raspicam.so" -o "output_http.so -w /usr/local/share/mjpg-streamer/www -p 8081"
+```
 
 test the stream :
 http://192.168.1.xxx:8081/?action=stream
 
 then create : 
+```bash
 sudo nano /etc/init.d/raspi-stream.sh
+```
 add this into :
 ```bash
 #!/bin/sh
@@ -63,11 +68,14 @@ case "$1" in
 esac
 exit 0
  ```
+```bash
 sudo chmod 755 /etc/init.d/raspi-stream.sh
 sudo sudo update-rc.d raspi-stream.sh
-
+```
 test service:
+```bash
 sudo service raspi-stream.sh start
+```
 
 Validate stream works 
 
