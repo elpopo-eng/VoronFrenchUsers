@@ -1,5 +1,5 @@
 # Voron 2.4 Filament motion sensor with TCRT5000
-Made by Tircown
+Made by Tircown#8715
 
 Can detect:
 - filament runout,
@@ -29,7 +29,7 @@ Can detect:
 
 ### Configuration
 See the [filament_motion_sensor] section in [Config_Reference](https://github.com/KevinOConnor/klipper/blob/master/docs/Config_Reference.md#filament_motion_sensor).\
-A good start point is `detection_length: 2.0`
+A good starting value is `detection_length: 2.0`
 
 ### Pictures
 ![photo1](Images/picture0.png)
