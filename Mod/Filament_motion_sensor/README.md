@@ -15,7 +15,7 @@ Can detect:
 * 2 M3 threaded inserts
 * 1 ECAS (optional)
 
-![TCRT5000](Images/TCRT5000.jpg)
+![TCRT5000](Images/TCRT5000.png)
 *n°1 is bad - n°2 is good*
 
 ### Instruction
@@ -32,5 +32,5 @@ See the [filament_motion_sensor] section in [Config_Reference](https://github.co
 A good start point is `detection_length: 2.0`
 
 ### Pictures
-![photo1](Images/image0.jpg)
-![photo2](Images/image1.jpg)
+![photo1](Images/picture0.png)
+![photo2](Images/picture1.jpg)
