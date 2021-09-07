@@ -46,9 +46,9 @@ Choose how many retains :
 # e.g. alpha, beta, gamma, etc.         #
 #########################################
 
-retain  alpha   6
-retain  beta    7
-retain  gamma   4
+retain  alpha   7
+retain  beta    4
+retain  gamma   3
 #retain delta   3
 
 Here I retain 6 days (alpha) 7 weeks (beta) 4 years (gama)
@@ -84,5 +84,26 @@ one monthly first day of month at 1 o clock 4 retained
 
 Check your backups ;) also this could run when the pi is printing (did not see any impact) while i choose to pick up schedule where i m not printing that much so feel fre to change this according to your habits
 
- 
- 
+6: Extras 
+6.1: Add system service to backup at shutdown
+Create the service file :
+sudo nano /etc/systemd/system/backupatshutown.service
+
+paste the following content:
+[Unit]
+Description=Backup klipper config to Nas
+Requires=network.target
+After=network.target
+Before=shutdown.target halt.target poweroff.target
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/usr/bin/rsnapshot alpha
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+
+save the file using ctrl+x and approve the changes
