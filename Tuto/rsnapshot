@@ -1,0 +1,88 @@
+Main purpose of Rsnapshot is to offer granular backup of your data over a nas
+
+Here we foreseen this backups for the folder /home/pi over a nas to keep all our configuration and also moonraker db to retain Voron usage over reinstallation of the raspberry (because, you know, shit happens TM Murphy)
+
+1: pre requisites
+SSH access to the pi
+NAS up and running
+SMB share availlable on the NAs (not part of this guide but i recommend a separate folder and user, i use rpibackup user that access /mnt/backups/rpi)
+
+
+2: Auto mount the NAS share:
+sudo apt-get install cifs-utils
+
+Create a password file:
+nano /home/pi/.smb
+
+
+user=backuprpi
+password=MyPassword
+
+then edit fstab 
+sudo nano /etc/fstab 
+and add the following line
+#remote path.                       local path  sharetype  options
+//MonServer.ip(ou name)/BackupShare /mnt/backup cifs  uid=0,credentials=/home/pi/.smb,iocharset=utf8,vers=3.0,noperm 0 0
+
+then test the mount using 
+sudo mount -a
+
+Now we have a nas share availlable on a folder on the pi each boot 
+
+3: installation of rsnashots :
+sudo apt-get install rsnapshot 
+once installed edit the config file :
+sudo nano /etc/rsnapshot.conf 
+ 
+ Change the path to the local one :
+# All snapshots will be stored under this root directory.
+#
+snapshot_root   /mnt/backup/rpi
+
+Choose how many retains :
+#########################################
+#     BACKUP LEVELS / INTERVALS         #
+# Must be unique and in ascending order #
+# e.g. alpha, beta, gamma, etc.         #
+#########################################
+
+retain  alpha   6
+retain  beta    7
+retain  gamma   4
+#retain delta   3
+
+Here I retain 6 days (alpha) 7 weeks (beta) 4 years (gama)
+
+and lastly ###############################
+### BACKUP POINTS / SCRIPTS ###
+###############################
+
+# LOCALHOST
+backup  /home/pi        localhost/
+
+will tell which folder needs to be saved
+
+ 
+and validate config using rsnapshot configtest
+ 
+Check what will happen with rsnapshot -t alpha
+
+4:Automation using crontab
+Sudo crontab -e
+#0 3 * * * /mnt/backup/system_backup.sh
+00 09 * * *     /usr/bin/rsnapshot alpha
+00 12 * * 7     /usr/bin/rsnapshot beta
+00 14 1 * *     /usr/bin/rsnapshot gamma
+#00 22 1 * *     /usr/local/bin/rsnapshot delta
+
+use https://crontab.guru to choose your schedule here i have :
+one daily at 09 am (alpha 6 retained)
+one weekly synday at 12h 7 retains
+one monthly first day of month at 1 o clock 4 retained
+
+5: validation 
+
+Check your backups ;) also this could run when the pi is printing (did not see any impact) while i choose to pick up schedule where i m not printing that much so feel fre to change this according to your habits
+
+ 
+ 
