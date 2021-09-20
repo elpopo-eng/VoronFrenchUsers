@@ -1,4 +1,4 @@
-Support pour camera OV3660 pour aller sur le profil statique du fond de la gantry.
+Support pour camera OV3660 rotatif pour aller sur le profil statique du fond de la gantry.
 
  [Lien Aliexpress](https://fr.aliexpress.com/item/4000929363815.html?spm)
 
