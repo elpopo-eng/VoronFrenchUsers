@@ -14,9 +14,11 @@ sudo apt-get install cifs-utils
 Create a password file:
 nano /home/pi/.smb
 
-
 user=backuprpi
 password=MyPassword
+
+then create the directory for mount the smb share
+sudo mkdir /mnt/backup
 
 then edit fstab 
 sudo nano /etc/fstab 
