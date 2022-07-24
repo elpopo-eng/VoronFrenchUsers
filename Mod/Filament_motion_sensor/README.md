@@ -32,5 +32,12 @@ See the [filament_motion_sensor] section in [Config_Reference](https://github.co
 A good starting value is `detection_length: 2.0`
 
 ### Pictures
+##### Normal
 ![photo1](Images/picture0.png)
+
+##### Inverted
+![inverted](Images/inverted.png)
+
+##### Assembly
 ![photo2](Images/picture1.jpg)
+
