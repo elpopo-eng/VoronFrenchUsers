@@ -25,7 +25,7 @@ Can detect:
 4. Place the needles bearings and the dual-gear on the shaft,
 5. Place the optionnal ECAS,
 6. Assemble the two halves with two M3x20,
-7. Install the TCRT5000 module with a M3x20 by self-tapping.
+7. Install the TCRT5000 module with a M3x8 by self-tapping.
 
 ### Configuration
 See the [filament_motion_sensor] section in [Config_Reference](https://github.com/KevinOConnor/klipper/blob/master/docs/Config_Reference.md#filament_motion_sensor).\
