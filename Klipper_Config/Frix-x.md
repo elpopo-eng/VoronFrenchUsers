@@ -1,0 +1,3 @@
+Frix-x config, c'est par ici : https://github.com/Frix-x/klipper-voron-V2
+
+Avec, pas mal de macros dans tous les sens, dont le "adaptive bed mesh" pour mesher uniquement là où il faut, ainsi que les différentes macros de calib PA et Flow, etc...
