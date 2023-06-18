@@ -1,4 +1,4 @@
-Mod to allow Mellow SHT42 board being attached on right side of the Bondtech LGX, on the right side PG7 Umbilical
+Mod to allow Mellow SHT42 board being attached on right side of the Bondtech LGX, on the left side PG7 Umbilical
 
 
 
